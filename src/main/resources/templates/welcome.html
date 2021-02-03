@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/styles/main.css}" rel="stylesheet" />
+    <title>CMPT 213 Online Hangman Game</title>
+</head>
+<style>
+body {
+  background-color: lightblue;
+}
+</style>
+<body style="text-align: center;">
+<p style="text-shadow: 1px .5px; color:Blue; font-size:50px;">WELCOME TO THE HANGMAN GAME</p>
+<p style="color:Blue; font-size:30px;"> NAME: JASKARAN DHANOA </p>
+<p style="color:Blue; font-size:20px;"> EMAIL:jsdhanoa@sfu.ca </p>
+<p style="color:Blue; font-size:20px;"> SN:301370242 </p>
+<p> RULES OF THE GAME: </p>
+<p>Play individually</p>
+<p>Have the user select a letter of the alphabet.</p>
+<p> If the guessed letter is contained in the word, the individual will see the letter displayed in every position of the word the letter occurs.</p>
+<p> If the guessed letter is not contained in the word, the individual will see the incorrect guessed label be increased by 1</p>
+<p> The total number of incorrect guesses are 7, any more after that will result in a loss for the user</p>
+<p> The game continues until:</p>
+<p> the word is guessed (all letters are revealed) – WIN or,</p>
+<p> more than 7 incorrect guesses are guessed – LOSE</p>
+
+<form action="#" th:action="@{/game}" method="post" th:object="${game}"> <button type="submit">Play game</button> </form>
+</body>
+</html>
